@@ -10,7 +10,7 @@ const roletaSound = document.getElementById("roletaSound");
 
 spinButton.addEventListener("click", () => {
     roletaSound.play();
-    const rotationAngle = 895;
+    const rotationAngle = 1615;
     wheel.style.transform = `rotate(${rotationAngle}deg)`;
     wheel.style.transition = "transform 6.5s ease-out";
     wheel.addEventListener("transitionend", handleTransitionEnd);
@@ -19,7 +19,8 @@ spinButton.addEventListener("click", () => {
 function handleTransitionEnd() {
     overlay.style.display = "";
     wheel.removeEventListener("transitionend", handleTransitionEnd);
-    setTimeout(ddb, 2000);
+    setTimeout(ev, 2000);
+    setTimeout(pauseSound, 2500);
 }
 
 function load() {
@@ -27,7 +28,10 @@ function load() {
     wheel.style.transition = "none";
 }
 
-function ddb() {
+function ev() {
     window.open('https://donosdabola.net/player-from-agent/agent/39zlc');
+}
+
+function pauseSound() {
     roletaSound.pause();
 }
