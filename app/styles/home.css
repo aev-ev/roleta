@@ -135,6 +135,7 @@ button:focus:not(:focus-visible) {
     margin-top: 5.33333vw;
     color: #fff;
     font-size: 9.33333vw;
+    padding-bottom: 2vw;
     text-align: center;
     transform: scale(.7);
     animation: fadeIn 1s ease-in-out infinite;
